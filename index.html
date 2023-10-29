@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czy csik jest grany?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center>
+        <h1>Mówisz, że chcesz zagrać w cska?</h1>
+        <h2>Zanim zawrócisz mi dupę, odpowiedz na te pytania!</h2>
+        <hr>
+        <br><br>
+            <div id="1">
+                <h2>Kto jest?</h2>
+                <input type="checkbox" name="pawel" id="pawel">
+                <label for="pawel">Paweł</label>
+                <input type="checkbox" name="janek" id="janek">
+                <label for="janek">Janek</label>
+                <input type="checkbox" name="antek" id="antek">
+                <label for="antek">Antek</label>
+                <br><br><br>
+                <button onclick="next(1)">Next</button>
+            </div>
+            <div id="2" style="display: none;">
+                <h2>W co?</h2>
+                <input type="radio" id="turniej" name="wco" value="turniej">
+                <label for="turniej">Turniej</label><br>
+                <input type="radio" id="premier" name="wco" value="premier">
+                <label for="premier">Premiere</label><br>
+                <input type="radio" id="wing" name="wco" value="wing">
+                <label for="wing">Skrzydło</label>
+                <br><br><br>
+                <button onclick="next2(2)">Next</button>
+            </div>
+    </center>
+    <script>
+        function next(n){
+            n = parseInt(n)
+            document.getElementById(n).style.display = "none"
+
+            // Dobra, zliczamy ile jest osób
+            il = 0
+            p = document.getElementById("pawel").checked
+            j = document.getElementById("janek").checked
+            a = document.getElementById("antek").checked
+            if(p){
+                il++
+            } 
+            if(j){
+                il++
+            }
+            if(a){
+                il++
+            }
+
+            // Jeśli są wszyscy, to tak, gramy
+            if(il == 3) {
+                window.location.href = "TAK.html";
+            }
+
+            // Jeśli jest tylko jedna, to pytanie w co gramy i z kim
+            if(il == 1) {
+                if(a == true){ // No, z samym Antkiem, to raczej nie, szanujmy sie
+                    window.location.href = "NIE.html";
+                } else {
+                    document.getElementById(eval(n+1)).style.display = "block"
+                }
+            }
+
+            // Jesli są 2 osoby, to nawet można
+            if(il == 2) {
+                window.location.href = "TAK.html";
+            }
+        }
+
+        function next2(n){
+            res = document.getElementsByName("wco")
+            
+            for(i = 0; i < res.length; i++){
+                if(res[i].checked){
+                    res = res[i].value
+                    break;
+                }
+            }
+            
+            if((res == "turniej" || res == "wing") && p == true){
+                window.location.href = "TAK.html";
+            } else if(res == "wing" && j == true) {
+                window.location.href = "TAK.html";
+            } else {
+                window.location.href = "NIE.html";
+            }
+        }
+    </script>
+</body>
+</html>
