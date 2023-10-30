@@ -58,8 +58,8 @@
                 il++
             }
 
-            // Jeśli są wszyscy, to tak, gramy
-            if(il == 3) {
+            // Jeśli są wszyscy lub 2 osoby, to tak, gramy
+            if(il >= 2) {
                 window.location.href = "TAK.html";
             }
 
@@ -70,11 +70,6 @@
                 } else {
                     document.getElementById(eval(n+1)).style.display = "block"
                 }
-            }
-
-            // Jesli są 2 osoby, to nawet można
-            if(il == 2) {
-                window.location.href = "TAK.html";
             }
         }
 
