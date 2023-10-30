@@ -1,3 +1,4 @@
+g = 0
 function next(n){
     n = parseInt(n)
     document.getElementById(n).style.display = "none"
@@ -17,15 +18,84 @@ function next(n){
         il++
     }
 
+    // Jeśli nikogo nie ma, WHY YOU DOING THIS
+    if(il == 0) {
+        switch(g) {
+            case 0:
+                alert("Zaznacz coś. ")
+                break
+            case 1:
+                alert("ZAZNACZ COŚ. ")
+                break
+            case 2:
+                alert("debilem jesteś czy głupi?")
+                break
+            case 3:
+                alert("debil")
+                break
+            case 4:
+                alert("BARANIE MUSISZ COŚ ZAZNACZYĆ. ")
+                break
+            case 5:
+                alert("nie masz co robić?")
+                break
+            case 6:
+                alert("Idź poczytaj coś może. ")
+                break
+            case 7:
+                alert("pierdolę to. ")
+                break
+            case 8:
+                alert("jebane zwierze...")
+                break
+            case 9:
+                alert("idę spać, pierdziele. ")
+                break
+            case 10:
+                alert("zzz...")
+                break
+            case 11:
+                alert("Zzz...")
+                break
+            case 12:
+                alert("ZzZzZ...")
+                break
+            case 13:
+                alert("No i co ty chcesz osiągnąć?")
+                break
+            case 14:
+                alert("Wywalone. Z takim debilem, to już na pewno nie chcę grać. ")
+                break
+            case 15:
+                alert("Sam tego chciałeś, dzbanie...")
+                break
+            case 16:
+                alert("Masz tu arbuza🍉")
+                break
+            case 17:
+                alert("A, i sztućce🍴")
+                break
+            case 18:
+                alert("bye!")
+                window.location.href = "NIE.html?why=debil"
+                break
+            default:
+                window.location.href = "NIE.html?why=debil"
+        }
+        g += 1
+        document.getElementById(n).style.display = "block"
+        return 0
+    }
+
     // Jeśli są wszyscy lub 2 osoby, to tak, gramy
     if(il >= 2) {
-        window.location.href = "TAK.html";
+        wePlay()
     }
 
     // Jeśli jest tylko jedna, to pytanie w co gramy i z kim
     if(il == 1) {
         if(a == true){ // No, z samym Antkiem, to raczej nie, szanujmy sie
-            window.location.href = "NIE.html";
+            window.location.href = "NIE.html?why=antek";
         } else {
             document.getElementById(eval(n+1)).style.display = "block"
         }
@@ -43,10 +113,22 @@ function next2(n){
     }
     
     if((res == "turniej" || res == "wing") && p == true){
-        window.location.href = "TAK.html";
+        wePlay()
     } else if(res == "wing" && j == true) {
-        window.location.href = "TAK.html";
+        wePlay()
     } else {
-        window.location.href = "NIE.html";
+        wePlay(1)
+    }
+}
+
+function wePlay(b) { 
+    const d = new Date()
+    let dzien = d.getDay()
+    if((dzien == 0 || dzien == 2 || dzien == 5 || dzien == 6) && b != 1) {
+        window.location.href = "TAK.html";
+    } else if(b != 1) {
+        window.location.href = "NIE.html?why=dzien";
+    } else {
+        window.location.href = "NIE.html?why=badmode";
     }
 }
