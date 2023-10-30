@@ -88,8 +88,11 @@ function next(n){
     }
 
     // Jeśli są wszyscy lub 2 osoby, to tak, gramy
-    if(il >= 2) {
+    if(il == 2) {
         wePlay()
+    }
+    if(il == 3) {
+        window.location.href = "TAK.html"
     }
 
     // Jeśli jest tylko jedna, to pytanie w co gramy i z kim
