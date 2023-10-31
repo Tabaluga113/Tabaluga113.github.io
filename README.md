@@ -1,7 +1,6 @@
 # nodebil.github.io
 > *Dla debili, przez debili*
 <BR>
-
 ********************
 
 - Czy zdarzyło ci się chcieć zagrać w cska, ale nie wiesz czy Kuba będzie?
