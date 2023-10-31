@@ -1,7 +1,11 @@
 g = 0
-function next(n){
+
+function chow(n) {
     n = parseInt(n)
     document.getElementById(n).style.display = "none"
+}
+function next(n){
+    
 
     // Dobra, zliczamy ile jest osób
     il = 0
@@ -100,6 +104,7 @@ function next(n){
         if(a == true){ // No, z samym Antkiem, to raczej nie, szanujmy sie
             window.location.href = "NIE.html?why=antek";
         } else {
+            chow(n)
             document.getElementById(eval(n+1)).style.display = "block"
         }
     }
