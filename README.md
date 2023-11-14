@@ -15,7 +15,7 @@ Wystarczy, że wejdziesz na stronę [nodebil.github.io](https://nodebil.github.i
 
 Już mówię. 
 
-**Wystarczy, że wejdziesz w link podany powyżej i odpowiesz na jedno/kilka banalych pytań!**
+**Wystarczy, że wejdziesz w link podany powyżej i odpowiesz na jedno/kilka banalnych pytań!**
 
 `(TY) Ale to wszystko?`
 
