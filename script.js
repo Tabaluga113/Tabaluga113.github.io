@@ -1,5 +1,5 @@
 g = 0
-wePlay()
+wePlay(2)
 
 function chow(n) {
     n = parseInt(n)
@@ -133,7 +133,7 @@ function next2(n){
 function wePlay(b) { 
     const d = new Date()
     let dzien = d.getDay()
-    if((dzien == 0 || dzien == 2 || dzien == 5 || dzien == 6) && b != 1) {
+    if((dzien == 0 || dzien == 2 || dzien == 5 || dzien == 6) && b != 1 && b != 2) {
         window.location.href = "TAK.html";
     } else if(b != 1) {
         window.location.href = "NIE.html?why=dzien";
