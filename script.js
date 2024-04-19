@@ -1,5 +1,5 @@
 g = 0
-wePlay(2)
+// wePlay(2)
 
 function chow(n) {
     n = parseInt(n)
