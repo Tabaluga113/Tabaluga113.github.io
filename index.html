@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Czy csik jest grany?</title>
+    <title>FUCK OFF</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="./imgs/image (2).png">
 
@@ -14,35 +14,30 @@
 </head>
 <body>
     <center>
-        <h1>Mówisz, że chcesz zagrać w cska?</h1>
-        <h2>Zanim zawrócisz mi dupę, odpowiedz na te pytania!</h2>
-        <hr>
-        <br><br>
-            <div id="1">
-                <h2>Kto jest?</h2>
-                <input type="checkbox" name="pawel" id="pawel">
-                <label for="pawel">Paweł</label>
-                <input type="checkbox" name="janek" id="janek">
-                <label for="janek">Janek</label>
-                <input type="checkbox" name="antek" id="antek">
-                <label for="antek">Antek</label>
-                <br><br><br>
-                <button onclick="next(1)">Next</button>
-            </div>
-            <div id="2" style="display: none;">
-                <h2>W co?</h2>
-                <input type="radio" id="turniej" name="wco" value="turniej">
-                <label for="turniej">Turniej</label><br>
-                <input type="radio" id="premier" name="wco" value="premier">
-                <label for="premier">Premiere</label><br>
-                <input type="radio" id="wing" name="wco" value="wing">
-                <label for="wing">Skrzydło</label>
-                <br><br><br>
-                <button onclick="next2(2)">Next</button>
-            </div>
+        <h1 id="tekst">nei :c 😭</h1>
+        <img style="width: 20%; color: white;" src="./imgs/image.png" alt="debil" id="res">
+        <h1>Czemu?</h1>
+        <h2 id="why" class="t"></h2>
     </center>
-    <script src="script.js"></script>
-    <BR><BR><BR><BR><BR>
-    <footer style="text-align: center;">Chcesz zobaczyć co to jest za strona i jak idzie development?<BR><BR><a href="https://github.com/nodebil/nodebil.github.io">Kliknij tutaj!</a></footer>
+    <script>
+        w = window.location.search.indexOf("=")
+        w = window.location.search.substring(w+1)
+        i = document.getElementById("why")
+
+        switch(w) {
+            case "badmode":
+                i.innerHTML = "sowwy, ale nie zagram z tobą w ten tryb. Może coś innego? :/"
+                break
+            case "dzien":
+                i.innerHTML = "Nie mogę dzisiaj. Raczej jutro dopiero. 🍕"
+                break
+            case "debil":
+                i.innerHTML = "Achievement Unlocked! [ debil.🤦‍♂️ ]"
+                break
+            case "antek":
+                i.innerHTML = "wtf xDDD"
+                break
+        }
+    </script>
 </body>
 </html>
